@@ -1,4 +1,8 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="math_number" id="362" x="-65" y="-113">
+    <field name="NUM">0</field>
+  </block>
+  <block type="oled_cleardisplay" id="184" x="-168" y="16"></block>
   <block type="controls_whileUntil" id="29" inline="false" x="175" y="14">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
@@ -17,7 +21,7 @@
             </value>
             <value name="STARTY">
               <block type="math_number" id="174">
-                <field name="NUM">20</field>
+                <field name="NUM">10</field>
               </block>
             </value>
             <next>
@@ -27,6 +31,52 @@
                     <field name="OBJECT">LEFTFRONT</field>
                   </block>
                 </value>
+                <next>
+                  <block type="oled_drawnumber" id="208" inline="true">
+                    <value name="NUMBER">
+                      <block type="sensor_object" id="430">
+                        <field name="OBJECT">LEFTFRONT</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="oled_setcursor" id="217" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="307">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="314">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_drawnumber" id="323" inline="true">
+                            <value name="NUMBER">
+                              <block type="sensor_object" id="446">
+                                <field name="OBJECT">LEFTFRONT</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="oled_setcursor" id="332" inline="true">
+                                <value name="STARTX">
+                                  <block type="math_number" id="339">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                                <value name="STARTY">
+                                  <block type="math_number" id="369">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
